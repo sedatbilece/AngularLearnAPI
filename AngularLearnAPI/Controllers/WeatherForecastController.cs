@@ -33,8 +33,8 @@ namespace AngularLearnAPI.Controllers
                     var temperatureC = Random.Shared.Next(-20, 45);
                     var date = DateTime.Now.AddDays(index);
                     return new WeatherForecast
-                    {
-                        Date = date.ToString("dd.MM.yyyy", CultureInfo.InvariantCulture),
+                    { 
+                        Date = date.ToString("dd.MM.yyyy", CultureInfo.InvariantCulture), 
                         TemperatureC = temperatureC,
                         Summary = GetSummaryByTemperature(temperatureC)
                     };
