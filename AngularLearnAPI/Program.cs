@@ -37,6 +37,9 @@ app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 
+// Health check endpoint - base URL için
+app.MapGet("/", () => "healthy");
+
 app.MapControllers();
 
 app.Run();
